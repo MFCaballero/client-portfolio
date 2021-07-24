@@ -122,6 +122,7 @@ export default function Profile(props){
     }
 
     return(
+        ctx.id ? 
         <div className='contExtProfile'>
             <div className='star'>
             <span></span>
@@ -225,6 +226,6 @@ export default function Profile(props){
             </div>
             </div>
             </div>
-        </div>
+        </div> : ""
     )
 }
