@@ -1,0 +1,172 @@
+.popUpAlert{
+    position:fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:3;
+    opacity: 1;
+    
+}
+.popup-inner{
+    position: absolute;
+    display: flex;
+    width: 80%;
+    height: 80%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 5px #000000;
+    margin-top: 2%;
+    margin-left: 4%;
+    z-index:3;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    opacity: 1;
+    overflow: hidden;
+}
+.contExtAbout{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 1;
+    border-radius: 5px;
+}
+.contExtSkills{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 1;
+}
+.imgAbout{
+    width: 50%;
+    border-radius: 5px;
+}
+.skillsIcons{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.paragraphAbout{
+    text-align: justify;
+    font-size : 1.7vw;
+    width: 90%;
+    height: 100%;
+    word-break: break-all;
+    white-space: normal;
+}
+.btnX{
+    display: flex;
+    flex-direction: row;
+    width: 99%;
+    height: 40px;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: none;
+}
+.textSkills{
+    margin-top: -2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.contExtCardSkills{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+}
+.skillCard{
+    font-size : 1.7vw;
+    background-color: #101f51;
+    box-shadow: 5px 5px 15px 5px #000000;
+    color: white;
+    width: fit-content;
+    padding: 5px;
+    margin: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform ease-in-out;
+}
+.skillCard:hover {
+    -webkit-animation-name: spinner;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-duration: 2s;
+
+    animation-name: spinner;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+@keyframes spinner {
+    from {
+      -moz-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+    to {
+      -moz-transform: rotateY(-360deg);
+      -ms-transform: rotateY(-360deg);
+      transform: rotateY(-360deg);
+    }
+}
+
+@media only screen and (max-width: 880px){
+    .contExtAbout{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        opacity: 1;
+        border-radius: 5px;
+    }
+    .contExtSkills{
+        overflow: auto;
+    }
+    .textSkills{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 20%;
+        width: 90%;
+        height: 100%;
+        margin-top: 20%;
+    }
+    .paragraphAbout{
+        font-size : 3vw;
+        margin-bottom: 10%;
+    }
+    h1 {
+        font-size : 3vw;
+        word-break: break-all;
+        white-space: normal;
+    }
+}

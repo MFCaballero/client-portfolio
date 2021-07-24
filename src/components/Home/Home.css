@@ -1,0 +1,135 @@
+
+.star{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotateZ(45deg);
+    z-index: -1;
+}
+
+span {
+    width: 170px;
+    height: 2px;
+    display: block;
+    background-image: linear-gradient(to right, #fff, transparent);
+    margin: 50px;
+    margin-bottom: 150px;
+    position: relative;
+    animation: shooting 2s linear infinite;
+    opacity: 0;
+}
+
+span::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 6px #fff;
+    border-radius: 50px;
+    filter: drop-shadow(0 0 6px rgb(122,168,255));
+}
+
+.star:nth-child(2) {
+    right: 100px;
+
+}
+.star:nth-child(2) span {
+    animation-delay: 1s;
+}
+
+.star:nth-child(3) {
+    right: 450px;
+}
+.star:nth-child(3) span {
+    animation-delay: 2s;
+}
+
+.star:nth-child(4) {
+    right: -150px;
+}
+.star:nth-child(4) span {
+    animation-delay: 3s;
+}
+
+.star:nth-child(5) {
+    right: -350px;
+}
+.star:nth-child(5) span {
+    animation-delay: 2s;
+}
+
+.star:nth-child(6) {
+    right: 550px;
+}
+.star:nth-child(6) span {
+    animation-delay: 4s;
+}
+
+.star:nth-child(7) {
+    right: 50px;
+}
+.star:nth-child(7) span {
+    animation-delay: 4s;
+}
+
+.star:nth-child(8) {
+    right: 750px;
+}
+.star:nth-child(8) span {
+    animation-delay: 5s;
+}
+
+.star:nth-child(9) {
+    right: -450px;
+}
+.star:nth-child(9) span {
+    animation-delay: 5s;
+}
+
+.star:nth-child(10) {
+    right: 250px;
+}
+.star:nth-child(10) span {
+    animation-delay: 4s;
+}
+
+
+@keyframes shooting {
+    0% {
+        transform: translateY(-200px) rotate(-90deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(600px) rotate(-90deg);
+        opacity: 0;
+    }
+}
+
+.contExtColumns{
+    position: absolute;
+    top: 50px;
+    left: 200px;
+    width: 95%;
+    height: 95%;
+}
+.contExtDroppable{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 95%;
+    height: 95%;
+}
+.column{
+    width: 10%;
+    height: 20%;
+    margin: 30px;
+}
+@media only screen and (max-width: 880px){
+    .contExtColumns{
+        left: 50px;
+    }
+}

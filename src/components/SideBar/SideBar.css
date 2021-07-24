@@ -1,0 +1,19 @@
+.sidebar{
+    margin: 0;
+    background-color: black;
+    opacity: 0.8;
+    height: 100vh;
+    width: 70px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.iconsSidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 50%;
+    margin-top: 100px;
+}
